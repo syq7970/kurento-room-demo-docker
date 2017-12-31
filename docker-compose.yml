@@ -1,0 +1,14 @@
+version: '3'
+services:
+  kurento-server:
+    container_name: kurento-server
+    image: "kurento/kurento-media-server"
+    ports: 
+    - "8888:8888"
+  kurento-client:
+    container_name: kurento-room
+    image: "syq7970/kurento-room"
+    ports: 
+      - "8443:8443"
+    links:
+      - kurento-server:kms
