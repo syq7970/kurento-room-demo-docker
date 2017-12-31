@@ -5,7 +5,7 @@ services:
     image: "kurento/kurento-media-server"
     ports: 
     - "8888:8888"
-  kurento-client:
+  kurento-room:
     container_name: kurento-room
     image: "syq7970/kurento-room"
     ports: 
