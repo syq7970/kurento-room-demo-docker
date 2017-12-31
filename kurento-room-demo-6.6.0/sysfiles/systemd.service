@@ -1,0 +1,9 @@
+[Unit]
+Description=Kurento Room Demo application
+
+[Service]
+User=kurento
+ExecStart=/var/lib/kurento/kurento-room-demo.jar run
+
+[Install]
+WantedBy=multi-user.target
