@@ -2,13 +2,17 @@ version: '3'
 services:
   kurento-server:
     container_name: kurento-server
-    image: "kurento/kurento-media-server"
+    image: "kurento/kurento-media-server:trusty-latest"
     ports: 
-    - "8888:8888"
+    - "0.0.0.0:8888:8888"
   kurento-room:
     container_name: kurento-room
     image: "syq7970/kurento-room"
     ports: 
-      - "8443:8443"
+      - "0.0.0.0:8443:8443"
     links:
       - kurento-server:kms
+  coturn-server:
+    container_name: coturn-server
+    image: "steppechange/docker-coturn"
+
